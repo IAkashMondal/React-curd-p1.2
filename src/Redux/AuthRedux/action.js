@@ -12,7 +12,8 @@ export const GET_AUTH_FAILURE_fn=()=>{
 
 export const LOGIN=(payload)=>(dispatch)=>{
     dispatch(GET_AUTH_FAILURE_fn())
-   return axios.post("https://reqres.in/api/login")
-    .then((r)=>{ dispatch(GET_AUTH_SUCESS_fn(r.data.token))})
+   return axios.post("https://reqres.in/api/login",payload)
+    .then((r)=>{ 
+        return dispatch(GET_AUTH_SUCESS_fn(r.data.token))})
     .catch((e)=>{GET_AUTH_FAILURE_fn(e)})
 }

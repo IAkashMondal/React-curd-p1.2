@@ -1,6 +1,6 @@
 import React from 'react'
-import BookList from './BookList'
-import FilterCompo from './FilterCompo'
+import BookList from '../Components/BookList'
+import FilterCompo from '../Components/FilterCompo'
 import styled from "styled-components"
 
 const Books = () => {

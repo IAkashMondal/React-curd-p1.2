@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from "styled-components"
 const BookCard = ({Sbook}) => {
   return (
@@ -9,6 +10,7 @@ const BookCard = ({Sbook}) => {
       <h4>{Sbook.category}</h4>
       <h4>{Sbook.release_year}</h4>
       <h4>{Sbook.author}</h4>
+      <Link to={`/books/${Sbook.id}/edit`}><button>Edit</button></Link>
       </FlexWrapper>
     </>
   )
